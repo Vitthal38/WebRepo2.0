@@ -10,10 +10,10 @@ files:
   - source: /login.html
     destination: /var/www/html/
 
-  - source: /css/style.css
+  - source: /css
     destination: /var/www/html/
 
-  - source: /js/script.js
+  - source: /js
     destination: /var/www/html/
 
 hooks:
