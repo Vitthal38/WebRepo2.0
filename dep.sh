@@ -1,4 +1,4 @@
 #!/bin/bash
-sudo apt update -y
-sudo apt install apache2 -y
-rm /var/www/html/index.html
+sudo yum update -y
+sudo yum install httpd -y
+sudo systemctl restart httpd
