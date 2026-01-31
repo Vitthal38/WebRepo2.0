@@ -1,40 +1,31 @@
-// Registration
-const registerForm = document.getElementById("registerForm");
+// Register
+const registerForm = document.getElementById('registerForm');
 if (registerForm) {
-registerForm.addEventListener("submit", function (e) {
+registerForm.addEventListener('submit', function (e) {
 e.preventDefault();
-
-
-const name = regName.value;
-const email = regEmail.value;
-const password = regPassword.value;
-
-
-localStorage.setItem("email", email);
-localStorage.setItem("password", password);
-
-
-alert("Registration Successful");
-window.location.href = "login.html";
+const email = document.getElementById('regEmail').value;
+const password = document.getElementById('regPassword').value;
+localStorage.setItem('userEmail', email);
+localStorage.setItem('userPassword', password);
+alert('Registration successful');
+window.location.href = 'login.html';
 });
 }
-
-
 // Login
-const loginForm = document.getElementById("loginForm");
+const loginForm = document.getElementById('loginForm');
 if (loginForm) {
-loginForm.addEventListener("submit", function (e) {
+loginForm.addEventListener('submit', function (e) {
 e.preventDefault();
-
-
-const storedEmail = localStorage.getItem("email");
-const storedPassword = localStorage.getItem("password");
-
-
-if (loginEmail.value === storedEmail && loginPassword.value === storedPassword) {
-alert("Login Successful");
+6
+const email = document.getElementById('loginEmail').value;
+const password = document.getElementById('loginPassword').value;
+if (
+email === localStorage.getItem('userEmail') &&
+password === localStorage.getItem('userPassword')
+) {
+alert('Login successful');
 } else {
-alert("Invalid Credentials");
+alert('Invalid credentials');
 }
 });
 }
