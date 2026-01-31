@@ -1,80 +1,132 @@
 * {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, sans-serif;
 }
-
-
 body {
-background: #f4f4f4;
+min-height: 100vh;
+background: linear-gradient(135deg, #667eea, #764ba2);
 }
-
-
-nav {
+/* Navbar */
+.navbar {
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 15px 30px;
-background: #333;
+padding: 16px 40px;
+background: rgba(255,255,255,0.15);
+backdrop-filter: blur(10px);
 color: white;
 }
-
-
-nav ul {
+.logo {
+font-size: 24px;
+font-weight: bold;
+}
+3
+.nav-links {
 list-style: none;
 display: flex;
 }
-
-
-nav ul li {
-margin-left: 20px;
+.nav-links li {
+margin-left: 25px;
 }
-
-
-nav ul li a {
+.nav-links a {
 color: white;
 text-decoration: none;
+font-weight: 500;
 }
-
-
+/* Hero */
 .hero {
 text-align: center;
-margin-top: 80px;
+margin-top: 120px;
+color: white;
 }
-
-
-.form-container {
+.hero h1 {
+font-size: 48px;
+}
+.hero p {
+margin-top: 10px;
+font-size: 18px;
+opacity: 0.9;
+}
+.hero-buttons {
+margin-top: 30px;
+}
+/* Buttons */
+.btn {
+padding: 12px 26px;
+background: white;
+color: #667eea;
+border-radius: 30px;
+text-decoration: none;
+font-weight: 600;
+margin: 0 10px;
+display: inline-block;
+transition: 0.3s;
+}
+.btn:hover {
+transform: translateY(-2px);
+4
+}
+.btn-outline {
+background: transparent;
+border: 2px solid white;
+color: white;
+}
+/* Forms */
+.center-page {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.card {
+background: white;
+padding: 30px;
 width: 90%;
 max-width: 400px;
-margin: 80px auto;
-background: white;
-padding: 25px;
-border-radius: 5px;
+border-radius: 16px;
+box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+animation: fadeIn 0.6s ease;
 }
-
-
-.form-container h2 {
+@keyframes fadeIn {
+from { opacity: 0; transform: scale(0.9); }
+to { opacity: 1; transform: scale(1); }
+}
+.card h2 {
 text-align: center;
 margin-bottom: 20px;
 }
-
-
-form input {
+.card input {
 width: 100%;
-padding: 10px;
-margin: 10px 0;
+padding: 12px;
+margin: 12px 0;
+border-radius: 8px;
+border: 1px solid #ccc;
 }
-
-
-form button {
+.card input:focus {
+outline: none;
+border-color: #667eea;
+}
+.card button {
 width: 100%;
-padding: 10px;
-background: #333;
-color: white;
-border: none;
-cursor: pointer;
+margin-top: 10px;
+5
 }
-
-
-@media (max-width: 600px) {
-nav {
+.switch {
+margin-top: 15px;
+text-align: center;
+}
+.switch a {
+color: #667eea;
+text-decoration: none;
+font-weight: 500;
+}
+/* Responsive */
+@media (max-width: 768px) {
+.navbar {
 flex-direction: column;
+}
+.hero h1 {
+font-size: 34px;
 }
 }
